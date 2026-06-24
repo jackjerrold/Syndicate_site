@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syndicate Robotics | FTC Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">SYN<span>DICATE</span> <span style="opacity:0.5; font-weight:400;">ROBOTICS</span></a>
+  <ul class="nav-links">
+    <li><a href="#directive">Directive</a></li>
+    <li><a href="#genesis">Genesis</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#robot">Robot</a></li>
+    <li><a href="#sponsors">Sponsors</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get In Touch</a>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#directive" onclick="toggleMobileNav()">Directive</a>
+  <a href="#genesis" onclick="toggleMobileNav()">Genesis</a>
+  <a href="#team" onclick="toggleMobileNav()">Team</a>
+  <a href="#robot" onclick="toggleMobileNav()">Robot</a>
+  <a href="#sponsors" onclick="toggleMobileNav()">Sponsors</a>
+  <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas class="circuit-canvas" id="circuitCanvas"></canvas>
+  <div class="hero-slash"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">FTC Robotics Team &nbsp;|&nbsp; Syndicate Robotics</div>
+    <h1 class="hero-title">
+      Build.<br>
+      <span class="red">Compete.</span><br>
+      <span class="outline">Dominate.</span>
+    </h1>
+    <p class="hero-sub">
+      We are Syndicate Robotics — a FIRST Tech Challenge team driven by precision engineering, relentless innovation, and the will to push mechanical limits every season.
+    </p>
+    <div class="hero-actions">
+      <a href="#robot" class="btn-primary">See Our Robot</a>
+      <a href="#team" class="btn-ghost">Meet The Team</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <span class="stat-num">FTC</span>
+      <span class="stat-label">Competition League</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">24/25</span>
+      <span class="stat-label">Active Season</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">0→∞</span>
+      <span class="stat-label">Growth Mindset</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Student Built</span>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    <span>Syndicate Robotics</span>
+    <span>FIRST Tech Challenge</span>
+    <span>Engineering Excellence</span>
+    <span>Student Driven</span>
+    <span>Built Different</span>
+    <span>Syndicate Robotics</span>
+    <span>FIRST Tech Challenge</span>
+    <span>Engineering Excellence</span>
+    <span>Student Driven</span>
+    <span>Built Different</span>
+  </div>
+</div>
+
+<!-- OUR DIRECTIVE -->
+<section id="directive">
+  <div class="section-eyebrow">02 / Our Directive</div>
+  <div class="directive-grid">
+    <div class="directive-left reveal">
+      <h2 class="section-title">What We<br>Stand For</h2>
+      <div class="directive-pillars">
+        <div class="pillar">
+          <div class="pillar-num">01</div>
+          <div class="pillar-content">
+            <h3>Engineering First</h3>
+            <p>Every design decision is grounded in mechanical and software engineering principles — no shortcuts, no guesswork. We prototype, test, and iterate until it's right.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">02</div>
+          <div class="pillar-content">
+            <h3>Gracious Professionalism</h3>
+            <p>We compete hard and help others do the same. FIRST's core values aren't a slogan for us — they define how we show up on and off the field.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">03</div>
+          <div class="pillar-content">
+            <h3>Community Impact</h3>
+            <p>Syndicate Robotics exists to prove that any student with a drive to learn can build something extraordinary and inspire the next generation of engineers.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">04</div>
+          <div class="pillar-content">
+            <h3>Continuous Improvement</h3>
+            <p>We don't stop at "good enough." Every competition, every match, every build session is a data point — we analyze, adapt, and come back stronger.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="directive-right reveal" style="transition-delay:0.15s;">
+      <div class="directive-quote">
+        <blockquote>"We don't build robots. We build engineers, problem-solvers, and teammates — the robot is just proof."</blockquote>
+        <cite>— Syndicate Robotics Team Motto</cite>
+      </div>
+      <div style="margin-top: 2.5rem; padding: 1.5rem; background: rgba(204,0,0,0.04); border: 1px solid var(--border);">
+        <div class="section-eyebrow" style="margin-bottom: 1rem;">Our Mission</div>
+        <p style="color: var(--muted); font-size: 0.92rem; line-height: 1.8; font-weight: 300;">
+          Syndicate Robotics is committed to designing, building, and competing with a robot that reflects the team's best thinking — while fostering the skills, confidence, and collaborative spirit that will serve our members long after the season ends.
+        </p>
+        <p style="color: var(--muted); font-size: 0.92rem; line-height: 1.8; font-weight: 300; margin-top: 0.8rem;">
+          We measure our success not just in match scores, but in the growth of every student who walks into our workspace.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR GENESIS -->
+<section id="genesis">
+  <div class="section-eyebrow">03 / Our Genesis</div>
+  <div class="genesis-layout">
+    <div class="reveal">
+      <div class="genesis-timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-text">
+            <h4>The Beginning</h4>
+            <h3>An Idea Takes Shape</h3>
+            <p>A group of students with a shared obsession: what if we built something that could actually compete?</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-text">
+            <h4>Formation</h4>
+            <h3>Syndicate is Born</h3>
+            <p>The name Syndicate was chosen to reflect our belief in collective strength — every member's expertise matters.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-text">
+            <h4>First Build Season</h4>
+            <h3>Getting Our Hands Dirty</h3>
+            <p>Late nights, long debates, and a lot of failed prototypes. We learned more from our mistakes than our successes.</p>
+          </div>
+        </div>
+        <div class="timeline-item active">
+          <div class="timeline-dot"></div>
+          <div class="timeline-text">
+            <h4>Now</h4>
+            <h3>Competing & Growing</h3>
+            <p>We're in the arena. Every match is a chance to prove what Syndicate Robotics is made of — and we're just getting started.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="genesis-story reveal" style="transition-delay:0.15s;">
+      <h2 class="section-title" style="margin-bottom: 1.5rem;">How We<br>Came to Be</h2>
+      <p>Syndicate Robotics didn't start with a perfect plan. It started with a question: <em style="color: var(--text);">what can we actually build if we commit to figuring it out?</em></p>
+      <p>A handful of students — each bringing a different background, a different skill set, and a different reason for being there — decided to stop wondering and start building. No prior team to join. No blueprint to follow. Just the FIRST Tech Challenge rulebook, a workspace, and the collective determination to make something real.</p>
+      <p>The name <em style="color: var(--text);">Syndicate</em> wasn't chosen casually. A syndicate is a coalition — individuals united around a common cause, each indispensable to the whole. That's the culture we chose to build from day one. No single star, no passengers. Everyone contributes, everyone learns, everyone owns the outcome.</p>
+      <p>We've had rough matches and rough builds. We've ripped apart mechanisms that took weeks to design because they simply didn't work under pressure. And every time, we came back to the workbench sharper, more prepared, and more certain that this is exactly the challenge we were looking for.</p>
+      <p>This is our genesis — not a polished origin story, but an honest one.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE TEAM -->
+<section id="team">
+  <div class="team-header">
+    <div>
+      <div class="section-eyebrow">04 / The Core Team</div>
+      <h2 class="section-title">The People<br>Behind the Machine</h2>
+    </div>
+    <p class="section-body" style="max-width: 380px; font-size: 0.9rem;">Every role matters. Every voice counts. This is the Syndicate.</p>
+  </div>
+
+  <div class="team-grid reveal">
+    <div class="team-card">
+      <div class="member-avatar">TSL</div>
+      <div class="member-name">Jack Jerrold</div>
+      <div class="member-role">Teleop Softwear Lead</div>
+      <div class="member-bio">Develops the robot's software, specializing in computer vision, driver controls, and sensor integration to maximize performance on the field.</div>
+    </div>
+    <div class="team-card">
+      <div class="member-avatar">ML</div>
+      <div class="member-name">Oscar Koralenko</div>
+      <div class="member-role">Mechanical Lead</div>
+      <div class="member-bio">Leads the design of the robot, creating efficient and reliable mechanical systems through CAD and engineering expertise.</div>
+    </div>
+    <div class="team-card">
+      <div class="member-avatar">MSL</div>
+      <div class="member-name">Kevin Yu</div>
+      <div class="member-role">Mechanical Subsystems Lead</div>
+      <div class="member-bio">Focuses on the robot's hardware, with particular expertise in chain-driven mechanisms and durable mechanical assemblies.</div>
+    </div>
+    <div class="team-card">
+      <div class="member-avatar">ASL</div>
+      <div class="member-name">Hubert Terka</div>
+      <div class="member-role">Automus Softwear Lead</div>
+      <div class="member-bio">Develops autonomous routines, odometry systems, and navigation algorithms that enable precise and reliable autonomous performance.</div>
+    </div>
+    <div class="team-card" style="background: rgba(204,0,0,0.04); border: 1px dashed rgba(204,0,0,0.2);">
+      <div class="member-avatar" style="border-style: dashed; opacity: 0.5;">+</div>
+      <div class="member-name" style="color: var(--muted);">Your Name Here</div>
+      <div class="member-role">Open Position</div>
+      <div class="member-bio">We're always looking for motivated students who want to learn, build, and compete. Think that's you?</div>
+    </div>
+  </div>
+</section>
+
+<!-- ROBOT -->
+<section id="robot">
+  <div class="section-eyebrow">05 / Our Robot</div>
+  <div class="robot-grid">
+    <div class="reveal">
+      <div class="robot-visual">
+        <div class="robot-placeholder">
+          <!-- Animated robot schematic -->
+          <svg class="robot-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Chassis -->
+            <rect x="30" y="120" width="140" height="55" rx="2" stroke="#CC0000" stroke-width="1.5" fill="rgba(204,0,0,0.05)"/>
+            <!-- Drivetrain wheels -->
+            <circle cx="55" cy="178" r="12" stroke="#CC0000" stroke-width="1.5" fill="rgba(204,0,0,0.1)"/>
+            <circle cx="145" cy="178" r="12" stroke="#CC0000" stroke-width="1.5" fill="rgba(204,0,0,0.1)"/>
+            <circle cx="55" cy="178" r="5" fill="#CC0000" opacity="0.6"/>
+            <circle cx="145" cy="178" r="5" fill="#CC0000" opacity="0.6"/>
+            <!-- Body box -->
+            <rect x="45" y="60" width="110" height="62" rx="2" stroke="#CC0000" stroke-width="1.5" fill="rgba(204,0,0,0.06)"/>
+            <!-- Arm -->
+            <rect x="140" y="20" width="12" height="80" rx="2" stroke="#CC0000" stroke-width="1.5" fill="rgba(204,0,0,0.08)"/>
+            <!-- Claw -->
+            <path d="M148 20 L168 8 M148 20 L168 20 M148 20 L168 32" stroke="#CC0000" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Sensor array -->
+            <rect x="60" y="68" width="20" height="12" rx="1" stroke="#CC0000" stroke-width="1" fill="rgba(204,0,0,0.15)"/>
+            <circle cx="70" cy="74" r="3" fill="#CC0000" opacity="0.8">
+              <animate attributeName="opacity" values="0.8;0.2;0.8" dur="1.5s" repeatCount="indefinite"/>
+            </circle>
+            <!-- Circuit lines -->
+            <path d="M80 91 L80 120 M100 91 L100 120 M120 91 L120 120" stroke="#CC0000" stroke-width="0.75" opacity="0.3"/>
+            <path d="M30 143 L170 143" stroke="#CC0000" stroke-width="0.75" opacity="0.3"/>
+            <!-- Control hub indicator -->
+            <rect x="88" y="72" width="36" height="22" rx="1" stroke="#CC0000" stroke-width="1" fill="rgba(204,0,0,0.08)"/>
+            <rect x="92" y="76" width="5" height="5" fill="#CC0000" opacity="0.4"/>
+            <rect x="99" y="76" width="5" height="5" fill="#CC0000" opacity="0.6"/>
+            <rect x="106" y="76" width="5" height="5" fill="#CC0000" opacity="0.3"/>
+            <!-- Greebling lines -->
+            <path d="M45 95 L55 95 M45 100 L60 100 M45 105 L50 105" stroke="#CC0000" stroke-width="0.75" opacity="0.25"/>
+          </svg>
+          <div class="robot-scan"></div>
+        </div>
+        <div class="robot-corner rc-tl"></div>
+        <div class="robot-corner rc-tr"></div>
+        <div class="robot-corner rc-bl"></div>
+        <div class="robot-corner rc-br"></div>
+        <div class="robot-label">SYN-MK1 // SCHEMATIC VIEW</div>
+      </div>
+      <div class="robot-desc">
+        <p>Our robot is designed around this season's challenge objectives — prioritizing scoring efficiency, drivetrain reliability, and rapid cycle times. Every mechanism was prototyped at least three times before making it onto the competition robot.</p>
+        <p>The design philosophy is simple: build what works, not what looks impressive. Every gram of weight and every inch of geometry is intentional.</p>
+      </div>
+    </div>
+
+    <div class="reveal" style="transition-delay: 0.15s;">
+      <h2 class="section-title" style="margin-bottom: 2rem;">System<br>Specifications</h2>
+      <div class="robot-specs">
+        <div class="spec-row">
+          <span class="spec-key">Designation</span>
+          <span class="spec-val highlight">SYN-MK1</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Drive Type</span>
+          <span class="spec-val">Mecanum Wheel</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Control Hub</span>
+          <span class="spec-val">REV Control Hub</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Drive Motors</span>
+          <span class="spec-val">4× goBILDA 5203</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Lift Mechanism</span>
+          <span class="spec-val">Linear Slide</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">End Effector</span>
+          <span class="spec-val">Servo-Driven Claw</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Vision</span>
+          <span class="spec-val">Webcam + AprilTag</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Language</span>
+          <span class="spec-val highlight">Java / FTC SDK</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Frame</span>
+          <span class="spec-val">Aluminum Extrusion</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key">Max Dimensions</span>
+          <span class="spec-val">18" × 18" × 18"</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section id="sponsors">
+  <div class="sponsors-header reveal">
+    <div class="section-eyebrow">06 / Sponsors</div>
+    <h2 class="section-title">Our Supporters</h2>
+    <p class="section-body" style="margin: 0 auto;">Syndicate Robotics is made possible by the generosity of those who believe in the next generation of engineers and innovators.</p>
+  </div>
+
+  <div class="sponsors-empty reveal">
+    <div class="sponsors-empty-icon">⚙</div>
+    <h3>No Sponsors Yet — Be The First</h3>
+    <p>We are actively seeking sponsors who want to invest in student-led STEM education. Your support directly funds robot components, competition registration, and team resources.</p>
+    <a href="#contact" class="btn-primary">Become a Sponsor</a>
+  </div>
+
+  <div class="reveal" style="transition-delay: 0.1s;">
+    <p style="font-family: 'Share Tech Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem; text-align: center;">Available Sponsorship Tiers</p>
+    <div class="sponsor-tiers">
+      <div class="tier-badge gold">
+        <div class="tier-name">⭐ Gold</div>
+        <div class="tier-perk">Logo on robot + banner + website</div>
+      </div>
+      <div class="tier-badge silver">
+        <div class="tier-name">◈ Silver</div>
+        <div class="tier-perk">Logo on banner + website</div>
+      </div>
+      <div class="tier-badge bronze">
+        <div class="tier-name">◇ Bronze</div>
+        <div class="tier-perk">Name on website + thank you</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-eyebrow">07 / Contact</div>
+  <div class="contact-layout">
+    <div class="reveal">
+      <h2 class="section-title">Get In<br>Touch</h2>
+      <p class="section-body">Whether you're a prospective student, a sponsor, or a fellow team wanting to connect — we want to hear from you.</p>
+
+      <div style="margin-top: 2.5rem;">
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉</div>
+          <div class="contact-detail-text">contact@syndicaterobotics.team</div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🎮</div>
+          <div class="contact-detail-text">https://discord.gg/GUyckwBx2</div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🔗</div>
+          <div class="contact-detail-text">ftc-events.firstinspires.org</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form reveal" style="transition-delay: 0.15s;" id="contactForm">
+      <div class="form-row">
+        <div class="field">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" placeholder="Jane">
+        </div>
+        <div class="field">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" placeholder="Doe">
+        </div>
+      </div>
+      <div class="field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="jane@example.com">
+      </div>
+      <div class="field">
+        <label for="reason">Reason for Contact</label>
+        <select id="reason">
+          <option value="">Select a reason...</option>
+          <option>Sponsorship Inquiry</option>
+          <option>Join the Team</option>
+          <option>Media / Press</option>
+          <option>Alliance Partnership</option>
+          <option>General Question</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Tell us what's on your mind..."></textarea>
+      </div>
+      <button class="form-submit" onclick="submitForm()">Send Message →</button>
+      <div class="form-note" id="formNote"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">SYN<span>DICATE</span> ROBOTICS</div>
+  <div class="footer-text">© 2025 Syndicate Robotics · FTC Team · All rights reserved</div>
+  <div class="footer-socials">
+    <a href="#" class="social-link" title="Instagram">&#9711;</a>
+    <a href="#" class="social-link" title="YouTube">&#9654;</a>
+    <a href="#" class="social-link" title="GitHub">&#9670;</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
