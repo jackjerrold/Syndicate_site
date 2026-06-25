@@ -86,37 +86,73 @@ window.addEventListener('scroll', () => {
   });
 });
 
-/* ===== CONTACT FORM ===== */
+/* ===== CONTACT FORM (EmailJS) ===== */
+ 
+// ── Paste your three EmailJS values here ──────────────────────────
+const EMAILJS_PUBLIC_KEY  = 'VpN3n7gJ3lzlpvZ0A';   // Account → General
+const EMAILJS_SERVICE_ID  = 'service_mu0ql9r';   // Email Services
+const EMAILJS_TEMPLATE_ID = 'template_i0clo8x';  // Email Templates
+// ──────────────────────────────────────────────────────────────────
+ 
+// Initialise EmailJS once the page loads
+emailjs.init(EMAILJS_PUBLIC_KEY);
+ 
 function submitForm() {
-  const name = document.getElementById('fname').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
-  const note = document.getElementById('formNote');
-
-  if (!name || !email || !message) {
+  const fname   = document.getElementById('fname').value.trim();
+  const lname   = document.getElementById('lname').value.trim();
+  const email   = document.getElementById('email').value.trim();
+  const reason  = document.getElementById('reason').value;
+  const message = document.getElementById('message').value.trim();
+  const note    = document.getElementById('formNote');
+  const btn     = document.querySelector('.form-submit');
+ 
+  // Basic validation
+  if (!fname || !email || !message) {
     note.style.color = '#FF2222';
     note.textContent = '// Please fill in all required fields.';
     return;
   }
-
+ 
+  // Loading state
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
   note.style.color = 'var(--muted)';
-  note.textContent = "// Message received. We'll be in touch shortly.";
-
-  document.getElementById('fname').value = '';
-  document.getElementById('lname').value = '';
-  document.getElementById('email').value = '';
-  document.getElementById('reason').value = '';
-  document.getElementById('message').value = '';
+  note.textContent = '// Transmitting...';
+ 
+  // Template parameters — these must match the variable names
+  // in your EmailJS email template (e.g. {{from_name}}, {{message}})
+  const templateParams = {
+    from_name:    `${fname} ${lname}`.trim(),
+    from_email:   email,
+    reason:       reason || 'Not specified',
+    message:      message,
+  };
+ 
+  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+    .then(() => {
+      note.style.color = '#44CC44';
+      note.textContent = '// Message received. We\'ll be in touch shortly.';
+      btn.textContent = 'Sent ✓';
+ 
+      // Clear the form
+      document.getElementById('fname').value    = '';
+      document.getElementById('lname').value    = '';
+      document.getElementById('email').value    = '';
+      document.getElementById('reason').value   = '';
+      document.getElementById('message').value  = '';
+ 
+      // Reset button after a moment
+      setTimeout(() => {
+        btn.disabled    = false;
+        btn.textContent = 'Send Message →';
+      }, 4000);
+    })
+    .catch((error) => {
+      note.style.color = '#FF2222';
+      note.textContent = '// Something went wrong. Please try again or email us directly.';
+      console.error('EmailJS error:', error);
+      btn.disabled    = false;
+      btn.textContent = 'Send Message →';
+    });
 }
 
-/* ===== SMOOTH NAV SCROLL ADJUSTMENT ===== */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      const top = target.offsetTop - 68;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
-  });
-});
