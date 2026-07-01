@@ -14,7 +14,7 @@ function resizeCanvas() {
 
 function drawCircuit() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.strokeStyle = '#CC0000';
+  ctx.strokeStyle = '#FF0000';
   ctx.lineWidth = 0.8;
   ctx.globalAlpha = 0.15;
 
@@ -41,7 +41,7 @@ function drawCircuit() {
       if (Math.random() > 0.7) {
         ctx.beginPath();
         ctx.arc(x, y, 2.5, 0, Math.PI * 2);
-        ctx.fillStyle = '#CC0000';
+        ctx.fillStyle = '#FF0000';
         ctx.fill();
       }
     }
